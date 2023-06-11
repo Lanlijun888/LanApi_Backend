@@ -1,0 +1,17 @@
+package com.api.utils;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import lombok.SneakyThrows;
+
+/**
+ * 字符串转为Json对象
+ * @author Editor
+ */
+public class Params2JsonUtils {
+    @SneakyThrows
+    public static JsonElement getJsonParams(String params) {
+        // 如果参数格式错误不为 Json，会自动抛出异常，异常交给调用者捕获处理
+        return JsonParser.parseString(params);
+    }
+}
